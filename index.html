@@ -399,19 +399,25 @@ img::-moz-selection {
     </section>
     <!-- JavaScript程式 -->
     <script>
-    // 抓輸入的值
-        function SendPetition() {
-            $.get("https://script.google.com/macros/s/AKfycbxNg6R7t9CdAUCBuF2P7zf0Wq0kMRfus0NJruUNY4mIGHalUNiJD1WbLtbGGwVBqKnKQQ/exec", {
-                    "name": name.val(),
-                    "email": email.val(),
-                    "career": career.val(),
-                    "comments": comments.val(),
-                    "checked": checked.val(),
-                },
-                function(data) {
-                    window.location = 'https://luomingcun.jrf.org.tw/thanks.html#thanks';
-                });
-        }
+    var name = $('#name'),
+        email = $('#email'),
+        career = $('#career'),
+        gender = $('#genderInput'),
+        comments = $('#comments'),
+        checked = $('#checked');
+
+    function SendPetition() {
+        $.get("https://script.google.com/macros/s/AKfycbxNg6R7t9CdAUCBuF2P7zf0Wq0kMRfus0NJruUNY4mIGHalUNiJD1WbLtbGGwVBqKnKQQ/exec", {
+                "name": name.val(),
+                "email": email.val(),
+                "career": career.val(),
+                "comments": comments.val(),
+                "checked": checked.val(),
+            },
+            function(data) {
+                window.location = 'https://luomingcun.jrf.org.tw/thanks.html#thanks';
+            });
+    }
     </script>
     <footer>
         <p>民間司法改革基金會成立於1995年11月。主要工作為法案推動、監督評鑑、個案追蹤與教育推廣。改革的力量必須由下而上，只有經由民間的推力，才能讓改革的夢想成為真實，最終建立人民信賴的司法。</p>
