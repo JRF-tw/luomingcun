@@ -32,6 +32,20 @@
     <!-- Theme JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://chiouhoshun.jrf.org.tw/js/grayscale.min.js"></script>
+    <script type="text/javascript">
+    function SendPetition() {
+        $.get("https://script.google.com/macros/s/AKfycbwXaHBmtizNOUzte9NE7Lk2_UTgErvGIDEOBXAyXRbGmofC_Rcc3quLhHsDgFMRhIi-/exec", {
+                "name": document.getElementById("nameInput").value,
+                "email": document.getElementById("emailInput").value,
+                "career": document.getElementById("careerInput").value,
+                "comments": document.getElementById("commentsInput").value,
+                "checked": document.getElementById("checkedInput").value,
+            },
+            function(data) {
+                window.location = 'https://luomingcun.jrf.org.tw/thanks.html#thanks';
+            });
+    }
+    </script>
     <style>
         body,
 html {
@@ -372,24 +386,24 @@ img::-moz-selection {
                     <div class="col-xs-12 bg-danger" style="margin-bottom: 1em;">
                         <h1 id="petition">立即連署</h1>
                         <p class="lead">支持檢察總長提起非常上訴，呼籲最高法院撤銷違法判決</p>
-                        <form id="petition_Form">
+                        <form role="form">
                             <div class="form-group">
-                                <input class="form-control" id="name" name="name" placeholder="姓名" type="text" required>
+                                <input class="form-control" id="nameInput" placeholder="姓名" type="text" required>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="email" name="email" placeholder="E-mail" type="email" required>
+                                <input class="form-control" id="emailInput" placeholder="E-mail" type="email" required>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="career" name="career" placeholder="就讀學校／工作單位" type="text" required>
+                                <input class="form-control" id="careerInput" placeholder="就讀學校／工作單位" type="text" required>
                             </div>
-                            <textarea class="form-control" id="comments" name="comments" placeholder="給羅明村的一句話" rows="5"></textarea>
+                            <textarea class="form-control" id="commentsInput" name="comments" placeholder="給羅明村的一句話" rows="5"></textarea>
                             <div class="form-check text-start">
-                                <input class="form-check-input" type="checkbox" value="Y" id="checked" checked>
+                                <input class="form-check-input" type="checkbox" value="Y" id="checkedInput" checked>
                                 <label class="form-check-label" for="CheckChecked">我同意收到與羅明村案相關的救援訊息
                                 </label>
                             </div>
                             <div class="col-sm-12 form-group">
-                                <button class="btn" type="submit" id="submitButton" onclick="SendPetition()">連署聲援</button>
+                                <button class="btn" type="button" onclick="SendPetition()">連署聲援</button>
                             </div>
                     </div>
                     </form>
@@ -397,28 +411,6 @@ img::-moz-selection {
             </div>
         </div>
     </section>
-    <!-- JavaScript程式 -->
-    <script>
-    var name = $('#name'),
-        email = $('#email'),
-        career = $('#career'),
-        gender = $('#genderInput'),
-        comments = $('#comments'),
-        checked = $('#checked');
-
-    function SendPetition() {
-        $.get("https://script.google.com/macros/s/AKfycbxNg6R7t9CdAUCBuF2P7zf0Wq0kMRfus0NJruUNY4mIGHalUNiJD1WbLtbGGwVBqKnKQQ/exec", {
-                "name": name.val(),
-                "email": email.val(),
-                "career": career.val(),
-                "comments": comments.val(),
-                "checked": checked.val(),
-            },
-            function(data) {
-                window.location = 'https://luomingcun.jrf.org.tw/thanks.html#thanks';
-            });
-    }
-    </script>
     <footer>
         <p>民間司法改革基金會成立於1995年11月。主要工作為法案推動、監督評鑑、個案追蹤與教育推廣。改革的力量必須由下而上，只有經由民間的推力，才能讓改革的夢想成為真實，最終建立人民信賴的司法。</p>
         <p>網站內容由<span property="cc:attributionName" xmlns:cc="http://creativecommons.org/ns#">民間司法改革基金會</span>製作，以<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">創用CC 姓名標示-相同方式分享 4.0 國際 授權條款</a>釋出。</p>
