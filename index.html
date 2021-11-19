@@ -329,6 +329,697 @@ img::-moz-selection {
         input, textarea {
             margin-top: 10px;
         }
+    .timeline {
+  width: 100%;
+  position: relative;
+  padding: 1px 0;
+  list-style: none;
+  font-weight: 300;
+}
+.timeline .timeline-item {
+  padding-left: 0;
+  padding-right: 30px;
+}
+.timeline .timeline-item.timeline-item-right,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-right) {
+  padding-left: 30px;
+  padding-right: 0;
+}
+.timeline .timeline-item .timeline-event {
+  width: 100%;
+}
+.timeline:before {
+  border-right-style: solid;
+}
+.timeline:before,
+.timeline:after {
+  content: " ";
+  display: block;
+}
+.timeline:after {
+  clear: both;
+}
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100% !important;
+  margin-left: 1px;
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #888888;
+}
+.timeline.timeline-single-column.timeline {
+  width: 100%;
+  max-width: 768px;
+}
+.timeline.timeline-single-column.timeline .timeline-item {
+  padding-left: 72px;
+  padding-right: 0;
+}
+.timeline.timeline-single-column.timeline .timeline-item.timeline-item-right,
+.timeline.timeline-single-column.timeline .timeline-item:nth-of-type(even):not(.timeline-item-right) {
+  padding-left: 72px;
+  padding-right: 0;
+}
+.timeline.timeline-single-column.timeline .timeline-item .timeline-event {
+  width: 100%;
+}
+.timeline.timeline-single-column.timeline:before {
+  left: 42px;
+  width: 0;
+  margin-left: -1px;
+}
+.timeline.timeline-single-column.timeline .timeline-item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.timeline.timeline-single-column.timeline .timeline-item:nth-of-type(even) {
+  margin-top: 0;
+}
+.timeline.timeline-single-column.timeline .timeline-item > .timeline-event {
+  float: right !important;
+}
+.timeline.timeline-single-column.timeline .timeline-item > .timeline-event:before,
+.timeline.timeline-single-column.timeline .timeline-item > .timeline-event:after {
+  right: auto !important;
+  border-left-width: 0 !important;
+}
+.timeline.timeline-single-column.timeline .timeline-item > .timeline-event:before {
+  left: -15px !important;
+  border-right-width: 15px !important;
+}
+.timeline.timeline-single-column.timeline .timeline-item > .timeline-event:after {
+  left: -14px !important;
+  border-right-width: 14px !important;
+}
+.timeline.timeline-single-column.timeline .timeline-item > .timeline-point {
+  transform: translateX(-50%);
+  left: 42px !important;
+  margin-left: 0;
+}
+.timeline.timeline-single-column.timeline .timeline-label {
+  transform: translateX(-50%);
+  margin: 0 0 20px 42px;
+}
+.timeline.timeline-single-column.timeline .timeline-label + .timeline-item + .timeline-item {
+  margin-top: 0;
+}
+.timeline.timeline-line-solid:before {
+  border-right-style: solid;
+}
+.timeline.timeline-line-dotted:before {
+  border-right-style: dotted;
+}
+.timeline.timeline-line-dashed:before {
+  border-right-style: dashed;
+}
+.timeline .timeline-item {
+  position: relative;
+  float: left;
+  clear: left;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.timeline .timeline-item:before,
+.timeline .timeline-item:after {
+  content: "";
+  display: table;
+ background-color:rgba(225, 225, 225, 0);
+ border:none;
+}
+.timeline .timeline-item:after {
+  clear: both;
+}
+.timeline .timeline-item:last-child {
+  margin-bottom: 0 !important;
+}
+.timeline .timeline-item.timeline-item-right > .timeline-event,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-right) > .timeline-event {
+  float: right !important;
+}
+.timeline .timeline-item.timeline-item-right > .timeline-event:before,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-right) > .timeline-event:before,
+.timeline .timeline-item.timeline-item-right > .timeline-event:after,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-right) > .timeline-event:after {
+  right: auto !important;
+  border-left-width: 0 !important;
+}
+.timeline .timeline-item.timeline-item-right > .timeline-event:before,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-right) > .timeline-event:before {
+  left: -15px !important;
+  border-right-width: 15px !important;
+}
+.timeline .timeline-item.timeline-item-right > .timeline-event:after,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-right) > .timeline-event:after {
+  left: -14px !important;
+  border-right-width: 14px !important;
+}
+.timeline .timeline-item > .timeline-event:before {
+  top: 10px;
+  right: -15px;
+  border-top: 15px solid transparent;
+  border-left-width: 15px;
+  border-left-style: solid;
+  border-right-width: 0;
+  border-right-style: solid;
+  border-bottom: 15px solid transparent;
+}
+.timeline .timeline-item > .timeline-event:after {
+  top: 11px;
+  right: -14px;
+  border-top: 14px solid transparent;
+  border-left-width: 14px;
+  border-left-style: solid;
+  border-right-width: 0;
+  border-right-style: solid;
+  border-bottom: 14px solid transparent;
+}
+.timeline .timeline-item > .timeline-point {
+  top: 25px;
+}
+.timeline-single-column.timeline .timeline-item > .timeline-event {
+  float: right !important;
+}
+.timeline-single-column.timeline .timeline-item > .timeline-event:before,
+.timeline-single-column.timeline .timeline-item > .timeline-event:after {
+  right: auto !important;
+  border-left-width: 0 !important;
+}
+.timeline-single-column.timeline .timeline-item > .timeline-event:before {
+  left: -15px !important;
+  border-right-width: 15px !important;
+}
+.timeline-single-column.timeline .timeline-item > .timeline-event:after {
+  left: -14px !important;
+  border-right-width: 14px !important;
+}
+.timeline .timeline-item:nth-of-type(2) {
+  margin-top: 40px;
+}
+.timeline .timeline-item.timeline-item-right,
+.timeline .timeline-item.timeline-item-right {
+  clear: both !important;
+}
+.timeline .timeline-item.timeline-item-right,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-right) {
+  float: right;
+  clear: right;
+}
+.timeline .timeline-item.timeline-item-right > .timeline-point,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-right) > .timeline-point {
+  left: -24px;
+}
+.timeline .timeline-item.timeline-item-right > .timeline-point.timeline-point-blank,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-right) > .timeline-point.timeline-point-blank {
+  left: -12px;
+}
+.timeline .timeline-item.timeline-item-arrow-sm.timeline-item-right > .timeline-event,
+.timeline .timeline-item.timeline-item-arrow-sm:nth-of-type(even):not(.timeline-item-right) > .timeline-event {
+  float: right !important;
+}
+.timeline .timeline-item.timeline-item-arrow-sm.timeline-item-right > .timeline-event:before,
+.timeline .timeline-item.timeline-item-arrow-sm:nth-of-type(even):not(.timeline-item-right) > .timeline-event:before,
+.timeline .timeline-item.timeline-item-arrow-sm.timeline-item-right > .timeline-event:after,
+.timeline .timeline-item.timeline-item-arrow-sm:nth-of-type(even):not(.timeline-item-right) > .timeline-event:after {
+  right: auto !important;
+  border-left-width: 0 !important;
+}
+.timeline .timeline-item.timeline-item-arrow-sm.timeline-item-right > .timeline-event:before,
+.timeline .timeline-item.timeline-item-arrow-sm:nth-of-type(even):not(.timeline-item-right) > .timeline-event:before {
+  left: -10px !important;
+  border-right-width: 10px !important;
+}
+.timeline .timeline-item.timeline-item-arrow-sm.timeline-item-right > .timeline-event:after,
+.timeline .timeline-item.timeline-item-arrow-sm:nth-of-type(even):not(.timeline-item-right) > .timeline-event:after {
+  left: -9px !important;
+  border-right-width: 9px !important;
+}
+.timeline .timeline-item.timeline-item-arrow-sm > .timeline-event:before {
+  top: 4px;
+  right: -10px;
+  border-top: 10px solid transparent;
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-right-width: 0;
+  border-right-style: solid;
+  border-bottom: 10px solid transparent;
+}
+.timeline .timeline-item.timeline-item-arrow-sm > .timeline-event:after {
+  top: 5px;
+  right: -9px;
+  border-top: 9px solid transparent;
+  border-left-width: 9px;
+  border-left-style: solid;
+  border-right-width: 0;
+  border-right-style: solid;
+  border-bottom: 9px solid transparent;
+}
+.timeline .timeline-item.timeline-item-arrow-sm > .timeline-point {
+  top: 14px;
+}
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-sm > .timeline-event {
+  float: right !important;
+}
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-sm > .timeline-event:before,
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-sm > .timeline-event:after {
+  right: auto !important;
+  border-left-width: 0 !important;
+}
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-sm > .timeline-event:before {
+  left: -10px !important;
+  border-right-width: 10px !important;
+}
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-sm > .timeline-event:after {
+  left: -9px !important;
+  border-right-width: 9px !important;
+}
+.timeline .timeline-item.timeline-item-arrow-md.timeline-item-right > .timeline-event,
+.timeline .timeline-item.timeline-item-arrow-md:nth-of-type(even):not(.timeline-item-right) > .timeline-event {
+  float: right !important;
+}
+.timeline .timeline-item.timeline-item-arrow-md.timeline-item-right > .timeline-event:before,
+.timeline .timeline-item.timeline-item-arrow-md:nth-of-type(even):not(.timeline-item-right) > .timeline-event:before,
+.timeline .timeline-item.timeline-item-arrow-md.timeline-item-right > .timeline-event:after,
+.timeline .timeline-item.timeline-item-arrow-md:nth-of-type(even):not(.timeline-item-right) > .timeline-event:after {
+  right: auto !important;
+  border-left-width: 0 !important;
+}
+.timeline .timeline-item.timeline-item-arrow-md.timeline-item-right > .timeline-event:before,
+.timeline .timeline-item.timeline-item-arrow-md:nth-of-type(even):not(.timeline-item-right) > .timeline-event:before {
+  left: -15px !important;
+  border-right-width: 15px !important;
+}
+.timeline .timeline-item.timeline-item-arrow-md.timeline-item-right > .timeline-event:after,
+.timeline .timeline-item.timeline-item-arrow-md:nth-of-type(even):not(.timeline-item-right) > .timeline-event:after {
+  left: -14px !important;
+  border-right-width: 14px !important;
+}
+.timeline .timeline-item.timeline-item-arrow-md > .timeline-event:before {
+  top: 10px;
+  right: -15px;
+  border-top: 15px solid transparent;
+  border-left-width: 15px;
+  border-left-style: solid;
+  border-right-width: 0;
+  border-right-style: solid;
+  border-bottom: 15px solid transparent;
+}
+.timeline .timeline-item.timeline-item-arrow-md > .timeline-event:after {
+  top: 11px;
+  right: -14px;
+  border-top: 14px solid transparent;
+  border-left-width: 14px;
+  border-left-style: solid;
+  border-right-width: 0;
+  border-right-style: solid;
+  border-bottom: 14px solid transparent;
+}
+.timeline .timeline-item.timeline-item-arrow-md > .timeline-point {
+  top: 25px;
+}
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-md > .timeline-event {
+  float: right !important;
+}
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-md > .timeline-event:before,
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-md > .timeline-event:after {
+  right: auto !important;
+  border-left-width: 0 !important;
+}
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-md > .timeline-event:before {
+  left: -15px !important;
+  border-right-width: 15px !important;
+}
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-md > .timeline-event:after {
+  left: -14px !important;
+  border-right-width: 14px !important;
+}
+.timeline .timeline-item.timeline-item-arrow-lg.timeline-item-right > .timeline-event,
+.timeline .timeline-item.timeline-item-arrow-lg:nth-of-type(even):not(.timeline-item-right) > .timeline-event {
+  float: right !important;
+}
+.timeline .timeline-item.timeline-item-arrow-lg.timeline-item-right > .timeline-event:before,
+.timeline .timeline-item.timeline-item-arrow-lg:nth-of-type(even):not(.timeline-item-right) > .timeline-event:before,
+.timeline .timeline-item.timeline-item-arrow-lg.timeline-item-right > .timeline-event:after,
+.timeline .timeline-item.timeline-item-arrow-lg:nth-of-type(even):not(.timeline-item-right) > .timeline-event:after {
+  right: auto !important;
+  border-left-width: 0 !important;
+}
+.timeline .timeline-item.timeline-item-arrow-lg.timeline-item-right > .timeline-event:before,
+.timeline .timeline-item.timeline-item-arrow-lg:nth-of-type(even):not(.timeline-item-right) > .timeline-event:before {
+  left: -18px !important;
+  border-right-width: 18px !important;
+}
+.timeline .timeline-item.timeline-item-arrow-lg.timeline-item-right > .timeline-event:after,
+.timeline .timeline-item.timeline-item-arrow-lg:nth-of-type(even):not(.timeline-item-right) > .timeline-event:after {
+  left: -17px !important;
+  border-right-width: 17px !important;
+}
+.timeline .timeline-item.timeline-item-arrow-lg > .timeline-event:before {
+  top: 10px;
+  right: -18px;
+  border-top: 18px solid transparent;
+  border-left-width: 18px;
+  border-left-style: solid;
+  border-right-width: 0;
+  border-right-style: solid;
+  border-bottom: 18px solid transparent;
+}
+.timeline .timeline-item.timeline-item-arrow-lg > .timeline-event:after {
+  top: 11px;
+  right: -17px;
+  border-top: 17px solid transparent;
+  border-left-width: 17px;
+  border-left-style: solid;
+  border-right-width: 0;
+  border-right-style: solid;
+  border-bottom: 17px solid transparent;
+}
+.timeline .timeline-item.timeline-item-arrow-lg > .timeline-point {
+  top: 28px;
+}
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-lg > .timeline-event {
+  float: right !important;
+}
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-lg > .timeline-event:before,
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-lg > .timeline-event:after {
+  right: auto !important;
+  border-left-width: 0 !important;
+}
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-lg > .timeline-event:before {
+  left: -18px !important;
+  border-right-width: 18px !important;
+}
+.timeline-single-column.timeline .timeline-item.timeline-item-arrow-lg > .timeline-event:after {
+  left: -17px !important;
+  border-right-width: 17px !important;
+}
+.timeline .timeline-item > .timeline-event {
+  background: #fff;
+  border: 1px solid #888888;
+  color: #555;
+  position: relative;
+  float: left;
+  border-radius: 3px;
+}
+.timeline .timeline-item > .timeline-event:before {
+  border-left-color: #888888;
+  border-right-color: #888888;
+}
+.timeline .timeline-item > .timeline-event:after {
+  border-left-color: #fff;
+  border-right-color: #fff;
+}
+.timeline .timeline-item > .timeline-event * {
+  color: inherit;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-default {
+  background: #fff;
+  border: 1px solid #888888;
+  color: #555;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-default:before {
+  border-left-color: #888888;
+  border-right-color: #888888;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-default:after {
+  border-left-color: #fff;
+  border-right-color: #fff;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-default * {
+  color: inherit;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-primary {
+  background: #f5f5f5;
+  border: 1px solid #888888;
+  color: #555;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-primary:before {
+  border-left-color: #888888;
+  border-right-color: #888888;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-primary:after {
+  border-left-color: #f5f5f5;
+  border-right-color: #f5f5f5;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-primary * {
+  color: inherit;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-success {
+  background: #F3F8ED;
+  border: 1px solid #72b92e;
+  color: #3F8100;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-success:before {
+  border-left-color: #72b92e;
+  border-right-color: #72b92e;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-success:after {
+  border-left-color: #F3F8ED;
+  border-right-color: #F3F8ED;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-success * {
+  color: inherit;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-info {
+  background: #F0F8FD;
+  border: 1px solid #3e93cf;
+  color: #0062A7;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-info:before {
+  border-left-color: #3e93cf;
+  border-right-color: #3e93cf;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-info:after {
+  border-left-color: #F0F8FD;
+  border-right-color: #F0F8FD;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-info * {
+  color: inherit;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-warning {
+  background: #FFF9E9;
+  border: 1px solid #d0aa42;
+  color: #ac7e00;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-warning:before {
+  border-left-color: #d0aa42;
+  border-right-color: #d0aa42;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-warning:after {
+  border-left-color: #FFF9E9;
+  border-right-color: #FFF9E9;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-warning * {
+  color: inherit;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-danger {
+  background: #FFC4BC;
+  border: 1px solid #d25a4b;
+  color: #B71500;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-danger:before {
+  border-left-color: #d25a4b;
+  border-right-color: #d25a4b;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-danger:after {
+  border-left-color: #FFC4BC;
+  border-right-color: #FFC4BC;
+}
+.timeline .timeline-item > .timeline-event.timeline-event-danger * {
+  color: inherit;
+}
+.timeline .timeline-item > .timeline-event:before,
+.timeline .timeline-item > .timeline-event:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
+.timeline .timeline-item > .timeline-event .timeline-heading,
+.timeline .timeline-item > .timeline-event .timeline-body,
+.timeline .timeline-item > .timeline-event .timeline-footer {
+  padding: 4px 10px;
+}
+.timeline .timeline-item > .timeline-event .timeline-heading p,
+.timeline .timeline-item > .timeline-event .timeline-body p,
+.timeline .timeline-item > .timeline-event .timeline-footer p,
+.timeline .timeline-item > .timeline-event .timeline-heading ul,
+.timeline .timeline-item > .timeline-event .timeline-body ul,
+.timeline .timeline-item > .timeline-event .timeline-footer ul {
+  margin-bottom: 0;
+}
+
+
+.timeline .timeline-item > .timeline-event .panel,
+.timeline .timeline-item > .timeline-event .table,
+.timeline .timeline-item > .timeline-event .blankslate {
+  margin: 0;
+  border: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.timeline .timeline-item > .timeline-point {
+  color: #888888;
+  background: #fff;
+  right: -24px;
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  position: absolute;
+  z-index: 100;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 100%;
+  line-height: 20px;
+  text-align: center;
+}
+.timeline .timeline-item > .timeline-point.timeline-point-blank {
+  right: -12px;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  margin-left: 6px;
+  margin-right: 6px;
+  color: #888888;
+  background: #888888;
+}
+.timeline .timeline-item > .timeline-point.timeline-point-default {
+  color: #888888;
+  background: #fff;
+}
+.timeline .timeline-item > .timeline-point.timeline-point-primary {
+  color: #888888;
+  background: #fff;
+}
+.timeline .timeline-item > .timeline-point.timeline-point-success {
+  color: #72b92e;
+  background: #fff;
+}
+.timeline .timeline-item > .timeline-point.timeline-point-info {
+  color: #3e93cf;
+  background: #fff;
+}
+.timeline .timeline-item > .timeline-point.timeline-point-warning {
+  color: #d0aa42;
+  background: #fff;
+}
+.timeline .timeline-item > .timeline-point.timeline-point-danger {
+  color: #d25a4b;
+  background: #fff;
+}
+.timeline .timeline-label {
+  position: relative;
+  float: left;
+  clear: left;
+  width: 50%;
+  margin-bottom: 20px;
+  top: 1px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  text-align: center;
+}
+.timeline .timeline-label:before,
+.timeline .timeline-label:after {
+  content: "";
+  display: table;
+}
+.timeline .timeline-label:after {
+  clear: both;
+}
+.timeline .timeline-label:last-child {
+  margin-bottom: 0 !important;
+}
+.timeline .timeline-label + .timeline-item {
+  margin-top: 0;
+}
+.timeline .timeline-label + .timeline-item + .timeline-item {
+  margin-top: 0px;
+}
+.timeline .timeline-label .label-default {
+  background-color: #888888;
+}
+.timeline .timeline-label .label-primary {
+  background-color: #888888;
+}
+.timeline .timeline-label .label-info {
+  background-color: #3e93cf;
+}
+.timeline .timeline-label .label-warning {
+  background-color: #d0aa42;
+}
+.timeline .timeline-label .label-danger {
+  background-color: #d25a4b;
+}
+@media (max-width: 768px) {
+  .timeline.timeline {
+    width: 100%;
+    max-width: 100%;
+  }
+  .timeline.timeline .timeline-item {
+    padding-left: 72px;
+    padding-right: 0;
+  }
+  .timeline.timeline .timeline-item.timeline-item-right,
+  .timeline.timeline .timeline-item:nth-of-type(even):not(.timeline-item-right) {
+    padding-left: 72px;
+    padding-right: 0;
+  }
+  .timeline.timeline .timeline-item .timeline-event {
+    width: 100%;
+  }
+  .timeline.timeline:before {
+    left: 42px;
+    width: 0;
+    margin-left: -1px;
+  }
+  .timeline.timeline .timeline-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .timeline.timeline .timeline-item:nth-of-type(even) {
+    margin-top: 0;
+  }
+  .timeline.timeline .timeline-item > .timeline-event {
+    float: right !important;
+  }
+  .timeline.timeline .timeline-item > .timeline-event:before,
+  .timeline.timeline .timeline-item > .timeline-event:after {
+    right: auto !important;
+    border-left-width: 0 !important;
+  }
+  .timeline.timeline .timeline-item > .timeline-event:before {
+    left: -15px !important;
+    border-right-width: 15px !important;
+  }
+  .timeline.timeline .timeline-item > .timeline-event:after {
+    left: -14px !important;
+    border-right-width: 14px !important;
+  }
+  .timeline.timeline .timeline-item > .timeline-point {
+    transform: translateX(-50%);
+    left: 42px !important;
+    margin-left: 0;
+  }
+  .timeline.timeline .timeline-label {
+    transform: translateX(-50%);
+    margin: 0 0 20px 42px;
+  }
+  .timeline.timeline .timeline-label + .timeline-item + .timeline-item {
+    margin-top: 0;
+  }
+@media (min-width: 768px)
+.timeline .timeline-item:before {
+    background-color: #fff;
+    border: 1px solid #fff;
+}
     </style>
 </head>
 
@@ -347,7 +1038,7 @@ img::-moz-selection {
                 <ul class="nav navbar-nav">
                     <<li>
                         <a class="page-scroll" href="#petition">立即連署</a>
-                    </li>
+                        </li>
                 </ul>
             </div>
         </div>
@@ -380,7 +1071,8 @@ img::-moz-selection {
                         <p class="text-left">每當午夜夢迴，我不會去評斷，我若在警察生涯平步青雲，現在應該是哪個單位的高階警官，而是我平日循規蹈矩奉公守法，如今卻淪落這個地步。
                         </p>
                     </blockquote>
-                    <p>羅明村，1997年時擔任台北縣新莊分局刑事組的組長，原是警界風雲人物，一起槍擊案衍生的收賄官司卻讓他的人生全改變──法院認定他收受黑道50萬元的賄款，包庇犯下槍擊案的真兇，而讓一位少年頂罪。</p><p>羅明村的案件有諸多問題：欠缺物證；調查站誘導、威脅、利誘證人；指認瑕疵；採認有問題的測謊報告等。甚至，法院認定羅明村與行賄者見面的時間，他提出的不在場證明，不但有警局的會議記錄簽到，還有領槍紀錄，最後事實審法院卻說即使有警察局公務會議簽到紀錄，羅明村還是可能偷溜出去。</p>
+                    <p>羅明村，1997年時擔任台北縣新莊分局刑事組的組長，原是警界風雲人物，一起槍擊案衍生的收賄官司卻讓他的人生全改變──法院認定他收受黑道50萬元的賄款，包庇犯下槍擊案的真兇，而讓一位少年頂罪。</p>
+                    <p>羅明村的案件有諸多問題：欠缺物證；調查站誘導、威脅、利誘證人；指認瑕疵；採認有問題的測謊報告等。甚至，法院認定羅明村與行賄者見面的時間，他提出的不在場證明，不但有警局的會議記錄簽到，還有領槍紀錄，最後事實審法院卻說即使有警察局公務會議簽到紀錄，羅明村還是可能偷溜出去。</p>
                     <p>由於不在場證明明確，更一審判決羅明村無罪，而且檢察官超過10日法定期間才提出上訴，依法應該無罪定讞。但是最高法院沒有發現上訴逾期，錯誤地將案件發回更審，導致羅明村更二審被判決13年有期徒刑確定。司改會義務律師團曾聲請再審及非常上訴，檢察總長也曾在2018年替羅明村提起非常上訴，無奈最後都被法院駁回。之後我們將會再次請求檢察總長為羅明村提起非常上訴，還他清白人生。</p>
                     <p>今年已經67歲的羅明村，還在監內期待平反日子的到來。</p>
                     <p>我們呼籲檢察總長提起非常上訴、最高法院撤銷違法判決。</p>
@@ -422,6 +1114,335 @@ img::-moz-selection {
                 <div class="col-sm-8">
                     <h2>連署團體</h2>
                     <p>民間司法改革基金會<br>台灣冤獄平反協會<br>台灣人權促進會<br>台灣廢除死刑推動聯盟<br>人權公約施行監督聯盟<br>台灣無辜者行動聯盟<br>台灣永社<br>台灣警察工作權益推動協會</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="content-section">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-center" style="margin-bottom: 1em;">了解本案</h1>
+                    <div class="well">
+                        <p>事情發生在紛紛擾擾的1997年。在即將邁入1997年之際，台灣發生了劉邦友血案及彭婉如命案，而警方卻一直無法有所突破。在1997年4月又發生了白曉燕命案，藝人白冰冰的女兒遭撕票，三名綁匪在大台北地區到處逃竄，在逃亡期間還陸續犯下數起強盜、綁架、殺人以及強姦案。直到該年的11月19日，白曉燕命案的最後一位兇嫌陳進興才棄械投降。警方承受著各界的壓力，這段期間並被認為是台灣治安史上的黑暗期。</p>
+                        <p>羅明村在那時剛好擔任台北縣新莊分局刑事組的組長，忙碌而又壓力大。</p>
+                        <p>偏偏在1997年11月6日凌晨1點，台北縣林口的「新樹林餐廳」卻又發生槍擊案⋯⋯。</p>
+                    </div>
+                    <h3 style="padding-top: 10px;">▶開端：新樹林槍擊案</h3>
+                    <p style="padding-left: 22px;">1997年11月6日凌晨，位在林口的新樹林餐廳發生槍擊事件，
+                        起因是一群道上兄弟的糾紛，由張志平為首的組織，其中還有其弟張志成以及朋友黃漢旗等人，前往新樹林餐廳欲找人談判，因為對方拒絕而開槍。槍擊案過後，由於他們認為身上背負太多前科，決定找一位年輕且無前科的人頂下槍擊案，也就是張志平及張志成的表弟黃國瑋。</p>
+                    <h3 style="padding-top: 10px;">▶轉折：發現頂罪案</h3>
+                    <p style="padding-left: 22px;">在1998年2月5號開庭時，黃國瑋翻供，表示槍擊案不是他犯下的，是黃漢旗指使的。此時，調查人員發覺犯下槍擊案的主嫌另有其人，開始調查本案有無執法人員包庇主嫌，以及有無行賄及收賄的情形發生。</p>
+                    <h3 style="padding-top: 10px;">▶證據皆為供述性證據</h3>
+                    <p style="padding-left: 22px;">檢調重新調查本案，並找來槍擊案的共犯及證人訊問，其中
+                        僅從張志成及黃漢旗的自白中發現有行賄羅明村的情節，但
+                        對於行賄的過程、如何聯繫及共犯間的犯罪意圖，皆不一致。
+                        爾後黃漢旗更於開庭時翻供，表明根本就<u>沒有</u>行賄羅明村，
+                        是因為受調查員影響才這樣供述，但法院認為這只是事後迴護羅明村的說法。</p>
+                    <h2 class="text-center">重要時序</h2>
+                    <!--時間軸-->
+                    <div class="timeline"><span class="timeline-label"><span class="label label-default">1997
+                            </span> </span>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1997.11.06 01:00AM</h5>
+                                    <p>新樹林餐廳槍擊案發生。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1997.11.06 08:00PM</h5>
+                                    <span style="color: #ffffff;" class="label label-danger">不在場證明</span>
+                                    <p>羅明村於台北縣新莊分局召開「1106專案會議」，並<strong>在會議記錄簿上簽名</strong>。</p>
+                                    <div style="padding: 10px;margin: 5px 0;" class="bg-danger small">
+                                        <h4>法院認定</h4>
+                                        <p>法院最終認定當晚黃漢旗有撥打羅明村手機約見面。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1997.11.07 08:00PM</h5>
+                                    <span style="color: #ffffff;" class="label label-danger">不在場證明</span>
+                                    <p>羅明村於台北縣新莊分局召開「1106專案會議」，並<strong>在會議記錄簿上簽名，召開會議後有領槍紀錄</strong>。</p>
+                                    <div style="padding: 10px;margin: 5px 0;" class="bg-danger small">
+                                        <h4>法院認定</h4>
+                                        <p>法院最終認定當晚羅明村與黃漢旗及張志成在「三六五茶藝館」會面商談頂罪、收賄事宜。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1997.11.09 04:00PM</h5>
+                                    <span style="color: #ffffff;" class="label label-danger">不在場證明</span>
+                                    <p><strong>出入登記簿顯示羅明村與另外兩名員警外出查案</strong>，回來後也無外出記錄。</p>
+                                    <div style="padding: 10px;margin: 5px 0;" class="bg-danger small">
+                                        <h4>法院認定</h4>
+                                        <p>法院最終認定當晚羅明村與黃漢旗及張志成在 「三六五茶藝館」進一步研究頂替方式及交賄、取賄。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1997.11.10 06:00PM</h5>
+                                    <p>蔡鈺雯（張志平之妻）至新莊分局報案，指稱新樹林案乃黃國瑋所為，但沒有做筆錄。</p>
+                                    <div style="padding: 10px;margin: 5px 0;" class="bg-danger small">
+                                        <h4>法院認定</h4>
+                                        <p>依據為蔡鈺雯、廖文輝的證詞，但最後未被法院採信。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1997.11.10 10:00PM</h5>
+                                    <p>羅銘村率隊前往麗雅汽車賓館臨檢，第一次於晚間十一時左右撲空，第二次臨檢於半夜十二點查獲黃國瑋及犯案槍械，黃國瑋並自白坦承犯案。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1997.11.11 上午</h5>
+                                    <p>蔡鈺雯所寫之檢舉信送達新莊分局。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1997.11.11 晚上</h5>
+                                    <p>新莊分局將黃國瑋移送板橋地方法院少年法庭。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1997.12.03</h5>
+                                    <p>新莊分局函請少年法庭併案偵辦，載明「本案另一嫌犯張志平，經通知拒不到案說明，顯有逃避刑責之嫌，請併案偵辦。」</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="timeline-label"><span class="label label-default">1998</span> </span>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1998.02.05</h5>
+                                    <p>黃國瑋翻供新樹林槍擊案其實不是他開槍的，而是黃漢旗。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1998.09.23</h5>
+                                    <p>被告張志平、張志成、王智正、黃漢旗拘提到案。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1998.11.17</h5>
+                                    <p>被告周錫銓自行到案。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1998.12.11</h5>
+                                    <p>羅明村於調查局測謊未過（測謊員：李復國）。</p>
+                                    <div style="padding: 10px;margin: 5px 0;" class="bg-danger small">
+                                        <h4>測謊存有瑕疵</h4>
+                                        <p>羅明村因為心臟有問題，根本沒辦法完成整個測謊程序，事後測謊的施測員還幫羅明村代為簽名。這件事在更一審勘驗測謊過程錄影帶時，獲得確認，但是在更二審時，因為測謊過程錄影帶已經超過保存期間而被銷毀，沒辦法再次勘驗，而不被承認。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="timeline-label"><span class="label label-default">1999</span> </span>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1999.01.12</h5>
+                                    <p>檢察官向板橋地方法院提起公訴。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>1999.07.29</h5>
+                                    <p>一審法院判羅明村該當違背職務收受賄賂罪，處有期徒刑拾參年。</p>
+                                    <p style="padding-top: 5px;"><small>臺灣板橋地方法院少年法庭八十八年度少連訴字第一四號刑事判決</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="timeline-label"><span class="label label-default">2000</span> </span>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>2000.05.17</h5>
+                                    <p>二審法院判羅明村該當違背職務收受賄賂罪，處有期徒刑拾參年。</p>
+                                    <p style="padding-top: 5px;"><small>臺灣高等法院八十八年度少連訴字第二四一號刑事判決</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>2000.08.03</h5>
+                                    <p>三審第一次判決撤銷羅明村之部分並發回更審，其他上訴駁回。</p>
+                                    <p style="padding-top: 5px;"><small>最高法院八十九年度台上字第四六七五號刑事判決</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event timeline-event-danger">
+                                <div class="timeline-heading">
+                                    <h5>2002.01.16</h5>
+                                    <p>更一審判決羅明村<strong>無罪</strong>。</p>
+                                    <p style="padding-top: 5px;"><small>臺灣高等法院少年法庭八十九年度少上更(一)字第二九號判決</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event timeline-event-danger">
+                                <div class="timeline-heading">
+                                    <h5>2002.01.30</h5>
+                                    <p>各被告與其辯護人收到判決書。</p>
+                                    <h5>2002.02.18</h5>
+                                    <p>檢察官收到判決書。</p>
+                                    <div style="padding: 10px;margin: 5px 0;background-color: #ffffff;" class="small">
+                                        <p><strong>相差近20日導致逾期上訴</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="timeline-label"><span class="label label-default">2003</span> </span>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>2003.04.22</h5>
+                                    <p>三審第二次判決羅明村之部分均撤銷，發回台灣高等法院。</p>
+                                    <p style="padding-top: 5px;"><small>最高法院九十二年度台上字第二一二一號刑事判決</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="timeline-label"><span class="label label-default">2008</span> </span>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>2008.10.29</h5>
+                                    <p>更二審判決羅明村該當違背職務收受賄賂罪，處有期徒刑拾參年。</p>
+                                    <p style="padding-top: 5px;"><small>臺灣高等法院九十二年度少上更(二)字第十八號刑事判決</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="timeline-label"><span class="label label-default">2009</span> </span>
+                        <div class="timeline-item timeline-item-right">
+                            <div class="timeline-point timeline-point-blank">&nbsp;</div>
+                            <div class="timeline-event">
+                                <div class="timeline-heading">
+                                    <h5>2009.04.13</h5>
+                                    <p>三審終局判決，上訴駁回，判決有罪定讞。</p>
+                                    <p style="padding-top: 5px;"><small>最高法院九十八年度台上字第一八九三號刑事判決</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--時間軸 end ---->
+                    <h3 style="padding-top: 10px;">▶殘酷的有罪結果</h3>
+                    <p style="padding-left: 22px;">檢察官最後以違背職務收受賄賂的罪名，起訴了羅明村。羅明村一審被判有罪、二審有罪，三審撤銷發回。更一審時他逆轉獲得無罪。羅明村獲得無罪後，檢察官再次上訴最高法院，這次是對羅明村不利的撤銷發回，而更二審也再度改判羅明村犯有違背職務收受賄賂罪，處有期徒刑13年，最高法院以並維持更二審的判決，由此全案於2009年4月13日確定。</p>
+                    <h3 style="padding-top: 10px;">▶無罪判決<small>VS</small>有罪判決</h3>
+                    <p style="padding-left: 22px;">關鍵的更一審無罪判決的主要理由，與更二審再次改判有罪的主要理由，之間的差異對照如下：</p>
+                    <ul>
+                        <li><h4>羅明村的不在場證明</h4>
+                            <table class="table table-condensed table-bordered">
+                                <tr>
+                                    <td class="text-center">更一審(無罪)</td>
+                                    <td class="text-center">更二審(有罪)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>採信。</strong><br>
+                                        法院採信羅明村於1997年11月6日、7日晚上，在開專案會議，無從與行賄者連繫或見面。11月9日16時與另兩位員警一起出去查案，之後回警局又與其他員警討論案件，並沒有與行賄者見面。
+                                    </td>
+                                    <td><strong>不採信。</strong><br>
+                                    法院認為雖然有專案會議，羅明村還是可以中間偷溜出去。而11月9日的行程，因為出入登記簿的記載不見得完整，無法用來證明羅明村的行蹤。而且證人是更一審時才出庭作證說明羅明村當日的行程，法院認為時間隔太久，證人根本不可能記得，只是迴護羅明村之詞。
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li><h4>行賄者的自白</h4>
+                            <table class="table table-condensed table-bordered">
+                                <tr>
+                                    <td class="text-center">更一審(無罪)</td>
+                                    <td class="text-center">更二審(有罪)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>不採信。</strong><br>
+                                        法院勘驗了調查站、檢察署的詢訊問錄影帶，認定偵訊手法構成不正訊問，而且認為自白的內容矛盾不一。
+                                    </td>
+                                    <td><strong>採信。</strong><br>
+                                    法院勘驗調查站、檢察署的詢訊問錄影帶，認為許多關鍵處錄不清楚，不得作對羅明村有利的解釋。而且從錄影帶內容來看，詢訊問方式頂多算口氣不佳，或為促使當事人喚起記憶所必須的辦案技巧，並不構成不正訊問。而自白內容僅有細節上的不同，但大致情節都相符。
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li><h4>測謊報告</h4>
+                            <table class="table table-condensed table-bordered">
+                                <tr>
+                                    <td class="text-center">更一審(無罪)</td>
+                                    <td class="text-center">更二審(有罪)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>不採信。</strong><br>
+                                        法院認定羅明村的心臟確實有問題，認為測謊報告的結論不能作對羅明村不利的認定。
+                                    </td>
+                                    <td><strong>採信。</strong><br>
+                                    於更二審時，測謊過程錄影帶已經超過保存期間而被銷毀，沒辦法再次勘驗。法院以測謊報告形式上並無問題，而且認為可以信賴施測員的專業，足以現場判斷羅明村能否進行測謊，並作出測謊不通過的結論。
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                    <h3 style="padding-top: 10px;">▶平反路遙遙</h3>
+                    <p style="padding-left: 22px;">司改會其實早就於2012年即向監察院提出羅明村案的陳訴。監察院於2013年4月作成調查意見，認定本案確實存在非法取供的問題，但沒有作出糾正案或彈劾案，也沒有針對測謊瑕疵的部分提出意見。司改會因此又於2014年11月繼續陳訴，希望監察院能就非法取供的部分，正式作成糾正案或彈劾案。而於2015年10月，又對羅明村案測謊瑕疵的部分提出陳訴，希望監察院依法調查。</p>
+                    <p style="padding-left: 22px;">這樣子持繼努力有無盡頭並不知，但對家屬真是無限的折磨…。</p>
+                    <p style="padding-left: 22px;">羅明村案雖然比不上死刑冤案受矚目，但還是希望更多人有意願了解本案，參與救援或進行聲援。也期待法官與檢察官們能逐漸認識虛偽自白以及測謊瑕疵的問題，一起來協助本案的再審。</p>
+                    <p class="text-center"><a class="btn btn-danger" href="#petition">連署聲援</a></p>
                 </div>
             </div>
         </div>
