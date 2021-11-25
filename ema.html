@@ -415,6 +415,25 @@
 
     }
     </style>
+    <script>
+    fetch('https://sheets.googleapis.com/v4/spreadsheets/1IYYReA6Cz-yHHqcgew2yciuUNKSXgg6dgkgLSmGxmG4/values/show?alt=json&key=AIzaSyBhesfP7Lzky3SVBE7scyJcNEsMM78ydbw')
+        .then(res => res.json())
+        .then(res => {
+            const data = res.values;
+            console.log(data);
+
+            Array.prototype.forEach.call(data, d => {
+                let Card = `
+              <div class="card hvr-wobble-bottom col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div style="width:250px" class="text-center center-block">
+                  <p style="padding-top:35%" class="small">${d[0]}</p>
+                </div>
+              </div>`;
+
+                document.querySelector('.js-append-card').insertAdjacentHTML('beforeend', Card);
+            })
+        })
+    </script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -425,13 +444,13 @@
                 <a class="navbar-brand" href="https://www.jrf.org.tw">
                     <img src="img/logo.svg" width="180" alt="">
                 </a>
-                <a class="navbar-toggle" href="#petition">立即連署</a>
+                <a class="navbar-toggle" href="index.html">立即連署</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <<li>
-                        <a class="page-scroll" href="#petition">立即連署</a>
+                        <a class="page-scroll" href="index.html">立即連署</a>
                         </li>
                 </ul>
             </div>
@@ -462,25 +481,7 @@
         <p>民間司法改革基金會成立於1995年11月。主要工作為法案推動、監督評鑑、個案追蹤與教育推廣。改革的力量必須由下而上，只有經由民間的推力，才能讓改革的夢想成為真實，最終建立人民信賴的司法。</p>
         <p>網站內容由<span property="cc:attributionName" xmlns:cc="http://creativecommons.org/ns#">民間司法改革基金會</span>製作，以<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">創用CC 姓名標示-相同方式分享 4.0 國際 授權條款</a>釋出。</p>
     </footer>
-    <script>
-    fetch('https://sheets.googleapis.com/v4/spreadsheets/1IYYReA6Cz-yHHqcgew2yciuUNKSXgg6dgkgLSmGxmG4/values/show?alt=json&key=AIzaSyBhesfP7Lzky3SVBE7scyJcNEsMM78ydbw')
-        .then(res => res.json())
-        .then(res => {
-            const data = res.values;
-            console.log(data);
-
-            Array.prototype.forEach.call(data, d => {
-                let Card = `
-              <div class="card hvr-wobble-bottom col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div style="width:250px" class="text-center center-block">
-                  <p style="padding-top:35%" class="small">${d[0]}</p>
-                </div>
-              </div>`;
-
-                document.querySelector('.js-append-card').insertAdjacentHTML('beforeend', Card);
-            })
-        })
-    </script>
+    
 </body>
 
 </html>
